@@ -1,0 +1,24 @@
+CREATE TABLE banda(
+	id SERIAL,
+	nome VARCHAR(50) NOT NULL,
+	estilo VARCHAR(25),
+	localDeOrigem VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE artista(
+	id SERIAL,
+	nome VARCHAR(50) NOT NULL,
+	banda int,
+	PRIMARY KEY (id),
+	FOREIGN KEY (banda) REFERENCES banda(id)  ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE album(
+	id SERIAL,
+	nome VARCHAR(50) NOT NULL,
+	banda int NOT NULL,
+	anoLancamento int,
+	PRIMARY KEY (id),
+	FOREIGN KEY (banda) REFERENCES banda(id)  ON UPDATE CASCADE ON DELETE CASCADE
+);
