@@ -17,11 +17,12 @@ public class Banda {
     public Banda() {
     }
 
-    public Banda(int id, String nome, Estilo estilo, String localDeOrigem) {
+    public Banda(int id, String nome, Estilo estilo, String localDeOrigem, List<String> integrates) {
         this.id = id;
         this.nome = nome;
         this.estilo = estilo;
         this.localDeOrigem = localDeOrigem;
+        this.integrates = integrates;
     }
 
     public int getId() {

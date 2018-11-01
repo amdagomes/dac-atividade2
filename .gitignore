@@ -1,0 +1,11 @@
+.DS_Store
+
+/atividade/
+
+# Maven
+/target/
+**/target/
+
+# Netbeans
+/nbproject
+nb-configuration.xml

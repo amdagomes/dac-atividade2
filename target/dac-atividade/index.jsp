@@ -19,7 +19,7 @@
                         <div class="column"></div>
                         <div class="column is-3 has-vertically-aligned-content">
                             <p class="m-bottom-1">
-                                <a href="#modal-banda" class="button is-primary is-inverted is-outlined is-medium" rel="modal:open">Cadastrar Banda</a>
+                                <a href="?erro=3" class="button is-primary is-inverted is-outlined is-medium">Cadastrar Banda</a>
                             </p>
                             <p>
                                 <a href="#modal-album" class="button button is-primary is-inverted is-outlined is-medium" rel="modal:open">Cadastrar Album</a>
@@ -88,6 +88,13 @@
                     showConfirmButton: false,
                     timer: 2000
                 });
+            }
+            if (erro === "3") {
+                swal({
+                    type: 'error',
+                    title: 'Erro',
+                    text: 'Função não está disponivel no momento, desculpe-nos o transtorno',
+                }); 
             }
             
             var sucesso = "${param.sucesso}";
